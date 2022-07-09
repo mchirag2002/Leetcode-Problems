@@ -23,7 +23,7 @@ public class Jump_game_array {
                 jump += nums[jump];
             }
         }
-        System.out.println("bruh");
+        System.out.println("sup");
 
     }
 }
