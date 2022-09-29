@@ -45,28 +45,4 @@ public class matrix_cell_increment {
         }
     }
 
-    public int oddCells_optimised(int n, int m, int[][] indices) {
-        int[] row = new int[n];
-        int rowOdd = 0;
-        int[] col = new int[m];
-        int colOdd = 0;
-        for(int[] index : indices) {
-            if ((++row[index[0]] & 1) == 1) {
-                ++rowOdd;
-            } else {
-                --rowOdd;
-            }
-            if ((++col[index[1]] & 1) == 1) {
-                ++colOdd;
-            } else {
-                --colOdd;
-            }
-        }
-        // for each row there are rowOdd odds and (n - rowOdd) evens.
-        // for each col there are colOdd odds and (m - colOdd) evens.
-        // each row is the same,
-        // for each odd col, it turns odd cell into even cell,
-        // thus kind of flips the odds and evens.
-        return rowOdd * (m - colOdd) + (n - rowOdd) * colOdd;
-    }
 }
