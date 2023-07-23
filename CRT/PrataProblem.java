@@ -22,7 +22,7 @@ public class PrataProblem {
             System.out.println(ans);
         }
     }
-    
+
     public static int solve(int[] arr, int order)
     {
         int low = 1;
@@ -50,6 +50,12 @@ public class PrataProblem {
     public static int calculate(int power, int time, int order)
     {
         //check ki time ke andar kitne max paranthe bangenge
+        /*
+        *   mathematical logic being that one chef makes R*n paranthas in nth second
+        *   hence in x time, they will make r+2r+3r...xr paranthas
+        *   which makes it equal to r*x*(x+1)/2 time
+        * */
+
         long low = 0;
         long high = order;
         int per = 0;
